@@ -86,7 +86,6 @@ aws ec2 create-key-pair --key-name mykeypairCLI --query 'KeyMaterial' --output t
 
 ```bash aws ec2 create-key-pair --key-name my-key --query "KeyMaterial" --output text > my-key.pem```
 
-![M9image06.png](assets/M9image06.png)
 
 **Note: double quotes for query fixed it**
 
@@ -101,7 +100,7 @@ We'll get both of these by running the "describe" cmd on the currently running e
 
 - running ```bash aws ec2 describe-subnets``` and the output shows us the 3 AZ subnets (as below)
 
-![M9image07.png](assets/M9image07.png)
+![M9image06.png](assets/M9image06.png)
 
 - for the demo it doesn't matter what subnet we use, so we'll grab the 1st one
 - the last  part we need is the image id / ami
@@ -143,6 +142,4 @@ aws ec2 run-instances --image-id ami-0f007bf1d5c770c6e --count 1 --instance-type
 ```
 ```bash ssh -i my-key ec2-user@54.220.248.62 ```
 
-![09_image46.png](https://github.com/jadedjelly/nana-techworld-devops-bootcamp/blob/main/notes/assets/09_aws/09_image46.png)
-
-![09_image47.png](https://github.com/jadedjelly/nana-techworld-devops-bootcamp/blob/main/notes/assets/09_aws/09_image47.png)
+![M9image07.png](assets/M9image07.png)
